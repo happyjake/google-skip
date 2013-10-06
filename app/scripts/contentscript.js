@@ -3,8 +3,11 @@
 (function($){	
 
 	var replace_links = function() {
-		$('li.g h3.r a').replaceWith(function() {
-		  return "<a href=\"" + $(this).attr('href') + "\" target=\"_blank\">" + $(this).text() + "</a>"
+		$('li.g h3.r a').filter(function(i,a){
+			return $(a).attr('_from') !== "skip";
+		}).replaceWith(function() {
+			// console.log(this);
+			return "<a href=\"" + $(this).attr('href') + "\" target=\"_blank\" _from=\"skip\">" + $(this).text() + "</a>"
 		});
 	};
 	
