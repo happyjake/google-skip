@@ -4,7 +4,7 @@
 
 	var replace_links = function() {
 		$('li.g h3.r a').replaceWith(function() {
-		  return "<a href=\"" + $(this).attr('href') + "\" target=\"_window\">" + $(this).text() + "</a>"
+		  return "<a href=\"" + $(this).attr('href') + "\" target=\"_blank\">" + $(this).text() + "</a>"
 		});
 	};
 	
